@@ -1,0 +1,21 @@
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+
+  <body>
+    <%- include("./partials/nav.ejs") %>
+
+    <div class="create-book content">
+      <form action="/books" method="post" enctype="multipart/form-data">
+        <label for="title">Book title:</label>
+        <input type="text" id="title" name="title" required />
+        <label for="snippet">Book snippet:</label>
+        <input type="text" id="snippet" name="snippet" required />
+        <label for="file">Book file:</label>
+        <input id="file" name="file" type="file" accept="application/pdf" required />
+        <input type="submit" value="save" />
+      </form>
+    </div>
+
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>
